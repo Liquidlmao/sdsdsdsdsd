@@ -1,7 +1,7 @@
 local original_pcall = pcall
 
 
-function Xeno.pcall(func, ...)
+function pcall(func, ...)
     
     local success, result = original_pcall(func, ...)
     
