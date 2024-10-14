@@ -1,6 +1,14 @@
-function pcall()
-return true
+local original_pcall = pcall
+
+
+function Xeno.pcall(func, ...)
+    
+    local success, result = original_pcall(func, ...)
+    
+    
+    return true, success and result or nil
 end
+
 
 local passes, fails, undefined = 0, 0, 0
 local running = 0
