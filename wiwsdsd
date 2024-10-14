@@ -292,7 +292,7 @@ end)
 
 test("debug.getconstant", {}, function()
 	local function test()
-		print("Hello, world!")
+		
 	end
 	assert(debug.getconstant(test, 1) == "print", "First constant must be print")
 	assert(debug.getconstant(test, 2) == nil, "Second constant must be nil")
